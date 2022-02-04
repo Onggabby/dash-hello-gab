@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Fri Feb  4 11:29:27 2022
+Created on Fri Feb  4 14:56:59 2022
 
 @author: gabrielmartinong
 """
+
 
 
 import dash
@@ -15,8 +16,7 @@ import pandas as pd
 import numpy as np
 import sqlite3
 from dash.exceptions import PreventUpdate
-
-app = dash.Dash(__name__,suppress_callback_exceptions=True)
+from app import app, server
 
 app.layout = html.Div([
   dcc.Location(id='url', refresh=False),
